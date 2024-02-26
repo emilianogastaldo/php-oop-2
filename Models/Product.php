@@ -22,6 +22,22 @@ class Product {
     public function setPrice($price){
         $this->price = $price;
     }
+
+    public function getPrice(){
+        return $this->price;
+    }
+
+    public function getCategory(){
+        return $this->category->getCategory();
+    }
+
+    public function getIcon(){
+        if($this->getCategory()==='Cane') return 'dog';
+        if($this->getCategory()==='Gatto') return 'cat';
+        if($this->getCategory()==='Pesce') return 'fish';
+        if($this->getCategory()==='Uccello') return 'dove';
+        else return 'circle-xmark';
+    }
 }
 
 ?>
