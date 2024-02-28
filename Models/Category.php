@@ -1,24 +1,28 @@
 <?php
 
-class Category{
+class Category
+{
     private $id;
     private $category;
 
-    public function __construct ($category){
+    public function __construct($category)
+    {
         $this->id = uniqid();
         $this->category = $category;
     }
 
-    public function getCategory(){
+    public function getCategory()
+    {
         return $this->category;
     }
-  
-    public function setCategory(string $newCategory){
+
+    public function setCategory(string $newCategory)
+    {
         $this->category = $newCategory;
     }
 
-    public function getID(){
+    public function getID()
+    {
         return $this->id;
     }
 }
-?>
